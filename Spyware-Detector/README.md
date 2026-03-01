@@ -47,7 +47,7 @@ python _spyware_detector.py
 > **Linux / macOS note:** You may need to prefix the run command with `sudo` to read all network connections.
 
 ```
-spyshield/
+Spyware-Detector/
 ├── _spyware_detector.py   # Main application (GUI + detection engine)
 ├── requirements.txt      # Python dependencies
 ├── README.md             # This file
