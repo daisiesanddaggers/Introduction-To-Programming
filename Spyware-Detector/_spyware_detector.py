@@ -96,14 +96,6 @@ class ThreatLinkedList:
 
 
 class HashTable:
-    """
-    Hash table with separate chaining (each bucket is a list of key-value pairs).
-    We use this for O(1) average-case lookups when checking process names against
-    known malicious signatures.
-
-    Hashing algorithm: DJB2 — fast and low-collision on short ASCII strings.
-    """
-
     def __init__(self, capacity=128):
         self.capacity = capacity
         # each slot starts as an empty list — this is the "separate chaining" part
@@ -1215,7 +1207,7 @@ class SpyShieldApp(tk.Tk):
             messagebox.showinfo("Export", "No threats to export. Run a scan first.")
             return
 
-        filename = f"spyshield_{datetime.datetime.now()}.csv"
+        filename = f"scanreport.csv"
         path = filedialog.asksaveasfilename(
             defaultextension=".csv",
             filetypes=[("CSV Files", "*.csv")],
